@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.sim/sim_1/impl/func/xsim/testbench4_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module functionF
+INFO: [VRFC 10-311] analyzing module mux8_to_1
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench5.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench5

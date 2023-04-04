@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/MONSTER/Desktop/lab05/project_2/project_2.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sim_1/new/testbench2.sv,1649923124,systemVerilog,,,,testbench2,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sources_1/new/dFlipFlop.sv,1649923124,systemVerilog,,C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sources_1/new/serialAdder.sv,,dFlipFlop,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sources_1/new/serialAdder.sv,1649923124,systemVerilog,,C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sources_1/new/shiftRegister.sv,,fulladder;halfadder;serialAdder,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sources_1/new/shiftRegister.sv,1649923124,systemVerilog,,C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sources_1/new/sumShiftRegister.sv,,shiftRegister,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sources_1/new/sumShiftRegister.sv,1649923124,systemVerilog,,C:/Users/MONSTER/Desktop/lab05/project_2/project_2.srcs/sim_1/new/testbench2.sv,,sumShiftRegister,,uvm,,,,,,

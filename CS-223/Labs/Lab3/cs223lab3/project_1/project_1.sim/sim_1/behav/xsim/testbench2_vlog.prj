@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/decoder1_to_2.sv" \
+"../../../../project_1.srcs/sources_1/new/decoder2_to_4.sv" \
+"../../../../project_1.srcs/sources_1/new/mux2_to_1.sv" \
+"../../../../project_1.srcs/sources_1/new/mux4_to_2.sv" \
+"../../../../project_1.srcs/sources_1/new/mux8_to_1.sv" \
+"../../../../project_1.srcs/sources_1/new/functionF.sv" \
+"../../../../project_1.srcs/sim_1/new/testbench1.sv" \
+"../../../../project_1.srcs/sim_1/new/testbench2.sv" \
+"../../../../project_1.srcs/sim_1/new/testbench3.sv" \
+"../../../../project_1.srcs/sim_1/new/testbench4.sv" \
+"../../../../project_1.srcs/sim_1/new/testbench5.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

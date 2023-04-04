@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu May 12 10:09:38 2022
+# Process ID: 12976
+# Current directory: C:/Users/MONSTER/Desktop/cs223_project/project/project.runs/synth_1
+# Command line: vivado.exe -log topModule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topModule.tcl
+# Log file: C:/Users/MONSTER/Desktop/cs223_project/project/project.runs/synth_1/topModule.vds
+# Journal file: C:/Users/MONSTER/Desktop/cs223_project/project/project.runs/synth_1\vivado.jou
+# Running On: DESKTOP-CRRKENA, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34205 MB
+#-----------------------------------------------------------
+source topModule.tcl -notrace

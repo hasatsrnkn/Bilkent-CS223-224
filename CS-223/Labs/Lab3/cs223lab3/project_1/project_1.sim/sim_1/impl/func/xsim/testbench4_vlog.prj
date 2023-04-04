@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"testbench4_func_impl.v" \
+
+sv xil_defaultlib  \
+"../../../../../project_1.srcs/sim_1/new/testbench1.sv" \
+"../../../../../project_1.srcs/sim_1/new/testbench2.sv" \
+"../../../../../project_1.srcs/sim_1/new/testbench3.sv" \
+"../../../../../project_1.srcs/sim_1/new/testbench4.sv" \
+"../../../../../project_1.srcs/sim_1/new/testbench5.sv" \
+
+# Do not sort compile order
+nosort

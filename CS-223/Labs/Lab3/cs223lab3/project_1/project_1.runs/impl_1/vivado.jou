@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Mar 17 15:19:41 2022
+# Process ID: 9840
+# Current directory: C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log decoder2_to_4.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source decoder2_to_4.tcl -notrace
+# Log file: C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.runs/impl_1/decoder2_to_4.vdi
+# Journal file: C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.runs/impl_1\vivado.jou
+# Running On: DESKTOP-CRRKENA, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34205 MB
+#-----------------------------------------------------------
+source decoder2_to_4.tcl -notrace

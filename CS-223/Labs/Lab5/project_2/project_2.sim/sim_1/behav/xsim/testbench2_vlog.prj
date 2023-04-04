@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../project_2.srcs/sources_1/new/dFlipFlop.sv" \
+"../../../../project_2.srcs/sources_1/new/serialAdder.sv" \
+"../../../../project_2.srcs/sources_1/new/shiftRegister.sv" \
+"../../../../project_2.srcs/sources_1/new/sumShiftRegister.sv" \
+"../../../../project_2.srcs/sim_1/new/testbench2.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,16 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench1.sv,1647204574,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench2.sv,,testbench1,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench2.sv,1647496335,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench3.sv,,testbench2,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench3.sv,1647503249,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench4.sv,,testbench3,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench4.sv,1647497453,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench5.sv,,testbench4,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench5.sv,1647210691,systemVerilog,,,,testbench5,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/decoder1_to_2.sv,1647213242,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/decoder2_to_4.sv,,decoder1_to_2,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/decoder2_to_4.sv,1647208288,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/mux2_to_1.sv,,decoder2_to_4,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/functionF.sv,1647503249,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sim_1/new/testbench1.sv,,functionF,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/mux2_to_1.sv,1647501174,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/mux4_to_2.sv,,mux2_to_1,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/mux4_to_2.sv,1647497808,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/mux8_to_1.sv,,mux4_to_1,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/mux8_to_1.sv,1647497808,systemVerilog,,C:/Users/MONSTER/Desktop/cs223lab3/project_1/project_1.srcs/sources_1/new/functionF.sv,,mux8_to_1,,uvm,,,,,,
