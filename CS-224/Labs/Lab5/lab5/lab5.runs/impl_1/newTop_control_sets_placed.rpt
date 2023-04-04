@@ -1,0 +1,99 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Fri Dec  2 16:43:15 2022
+| Host         : DESKTOP-CRRKENA running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file newTop_control_sets_placed.rpt
+| Design       : newTop
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    23 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    20 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              18 |            5 |
+| No           | No                    | Yes                    |             249 |           95 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              34 |           13 |
+| Yes          | Yes                   | No                     |             540 |          328 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+---------------------------------+------------------------------+------------------+----------------+--------------+
+|   Clock Signal  |          Enable Signal          |       Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+---------------------------------+------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG  |                                 | reset_IBUF                   |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG  |                                 |                              |                5 |             18 |         3.60 |
+|  clk_IBUF_BUFG  | debouncer/CNT                   | debouncer/CNT[27]_i_1_n_0    |                8 |             28 |         3.50 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[18]0 | top1/dataPath/pipe2/reset_8  |               19 |             32 |         1.68 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[1]0  | top1/dataPath/pipe2/reset_1  |               16 |             32 |         2.00 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[0]0  | top1/dataPath/pipe2/reset_2  |               23 |             32 |         1.39 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[10]0 | top1/dataPath/pipe2/reset_4  |               23 |             32 |         1.39 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[17]0 | top1/dataPath/pipe2/reset_9  |               16 |             32 |         2.00 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[11]0 | top1/dataPath/pipe2/reset_3  |               20 |             32 |         1.60 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[19]0 | top1/dataPath/pipe2/reset_7  |               22 |             32 |         1.45 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[16]0 | top1/dataPath/pipe2/reset_10 |               20 |             32 |         1.60 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[25]0 | top1/dataPath/pipe2/reset_13 |               23 |             32 |         1.39 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[26]0 | top1/dataPath/pipe2/reset_12 |               22 |             32 |         1.45 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[27]0 | top1/dataPath/pipe2/reset_11 |               19 |             32 |         1.68 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[2]0  | top1/dataPath/pipe2/reset_0  |               16 |             32 |         2.00 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[3]0  | top1/dataPath/pipe2/reset    |               17 |             32 |         1.88 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[8]0  | top1/dataPath/pipe2/reset_6  |               17 |             32 |         1.88 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[9]0  | top1/dataPath/pipe2/reset_5  |               20 |             32 |         1.60 |
+| ~clk_pulse_BUFG | top1/dataPath/pipe5/rf_reg[24]0 | top1/dataPath/pipe2/reset_14 |               27 |             32 |         1.19 |
+|  clk_pulse_BUFG | top1/dataPath/pipe2/E[0]        | reset_IBUF                   |               13 |             34 |         2.62 |
+|  clk_pulse_BUFG |                                 | reset_IBUF                   |               94 |            246 |         2.62 |
++-----------------+---------------------------------+------------------------------+------------------+----------------+--------------+
+
+

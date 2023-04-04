@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sim_1/new/testbench1.sv,1668444212,systemVerilog,,,,testbench1,,uvm,,,,,,
+C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv,1668751815,systemVerilog,,C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sim_1/new/testbench1.sv,,adder;alu;aludec;controller;datapath;dmem;flopr;imem;maindec;mips;mux2;mux4;newTop;regfile;signext;sl2;top,,uvm,,,,,,

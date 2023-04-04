@@ -1,0 +1,365 @@
+
+*** Running vivado
+    with args -log newTop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source newTop.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source newTop.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top newTop -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14532
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'newTop' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'pulse_controller' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/pulseController.sv:27]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/pulseController.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'pulse_controller' (1#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/pulseController.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'mips' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:94]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:112]
+INFO: [Synth 8-6157] synthesizing module 'maindec' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:132]
+INFO: [Synth 8-6155] done synthesizing module 'maindec' (2#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:132]
+INFO: [Synth 8-6157] synthesizing module 'aludec' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:156]
+INFO: [Synth 8-6155] done synthesizing module 'aludec' (3#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:156]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (4#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:112]
+INFO: [Synth 8-6157] synthesizing module 'datapath' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:174]
+INFO: [Synth 8-6157] synthesizing module 'flopr' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:273]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopr' (5#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:273]
+INFO: [Synth 8-6157] synthesizing module 'adder' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:254]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (6#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:254]
+INFO: [Synth 8-6157] synthesizing module 'sl2' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:260]
+INFO: [Synth 8-6155] done synthesizing module 'sl2' (7#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:260]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:285]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (8#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:285]
+INFO: [Synth 8-6157] synthesizing module 'mux4' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:293]
+INFO: [Synth 8-226] default block is never used [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:298]
+INFO: [Synth 8-6155] done synthesizing module 'mux4' (9#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:293]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:215]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (10#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:215]
+INFO: [Synth 8-6157] synthesizing module 'mux2__parameterized0' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:285]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2__parameterized0' (10#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:285]
+INFO: [Synth 8-6157] synthesizing module 'signext' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:266]
+INFO: [Synth 8-6155] done synthesizing module 'signext' (11#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:266]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:235]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (12#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:235]
+INFO: [Synth 8-6155] done synthesizing module 'datapath' (13#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:174]
+INFO: [Synth 8-6155] done synthesizing module 'mips' (14#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:94]
+INFO: [Synth 8-6157] synthesizing module 'imem' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (15#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:36]
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (16#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:36]
+INFO: [Synth 8-6155] done synthesizing module 'top' (17#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'display_controller' [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/displayController.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'display_controller' (18#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/displayController.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'newTop' (19#1) [C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.srcs/sources_1/new/top.sv:4]
+WARNING: [Synth 8-7129] Port a[31] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[30] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[29] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[28] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[27] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[26] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[25] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[24] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[23] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[22] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[21] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[20] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[19] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[18] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[17] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[16] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[15] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[14] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[13] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[12] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[11] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[10] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[9] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[8] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module dmem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[31] in module sl2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[30] in module sl2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[31] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[30] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[29] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[28] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[27] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[26] in module datapath is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1260.742 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/MONSTER/Desktop/basys3.xdc]
+Finished Parsing XDC File [C:/Users/MONSTER/Desktop/basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/MONSTER/Desktop/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/newTop_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/newTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1260.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1260.742 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pulse_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                              000 |                              000
+                  iSTATE |                              001 |                              001
+                 iSTATE0 |                              010 |                              010
+                 iSTATE1 |                              011 |                              011
+                 iSTATE2 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'pulse_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 2     
+	  23 Input   32 Bit        Muxes := 1     
+	   5 Input   28 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   8 Input    3 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design newTop has port dp driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+------------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object             | Inference | Size (Depth x Width) | Primitives     | 
++------------+------------------------+-----------+----------------------+----------------+
+|newTop      | top1/mips/dp/rf/rf_reg | Implied   | 32 x 32              | RAM32M x 12    | 
+|newTop      | top1/dmem/RAM_reg      | Implied   | 64 x 32              | RAM64X1S x 32  | 
++------------+------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+------------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object             | Inference | Size (Depth x Width) | Primitives     | 
++------------+------------------------+-----------+----------------------+----------------+
+|newTop      | top1/mips/dp/rf/rf_reg | Implied   | 32 x 32              | RAM32M x 12    | 
+|newTop      | top1/dmem/RAM_reg      | Implied   | 64 x 32              | RAM64X1S x 32  | 
++------------+------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |    48|
+|3     |LUT1     |    30|
+|4     |LUT2     |     5|
+|5     |LUT3     |    44|
+|6     |LUT4     |    20|
+|7     |LUT5     |   117|
+|8     |LUT6     |   234|
+|9     |RAM32M   |    10|
+|10    |RAM32X1D |     4|
+|11    |RAM64X1S |    32|
+|12    |FDCE     |    35|
+|13    |FDRE     |    34|
+|14    |FDSE     |    12|
+|15    |IBUF     |     3|
+|16    |OBUF     |    13|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1260.742 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1260.742 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1260.742 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 94 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1260.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 46 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 32 instances
+
+Synth Design complete, checksum: ff3c70d8
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1260.742 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/MONSTER/Desktop/singlecyclelab04/singlecyclelab04.runs/synth_1/newTop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file newTop_utilization_synth.rpt -pb newTop_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 18 09:06:02 2022...

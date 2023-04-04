@@ -1,0 +1,309 @@
+#################
+# CS224
+# LAB 6
+# SECTION 04
+# MEHMET HASAT SERINKAN
+# 21901649
+# 16.12.2022
+################
+.text
+	li $v0, 4
+	la $a0, welcomeMessage
+	syscall
+	
+	li $v0, 4
+	la $a0, dimensionMessage
+	syscall
+
+	li $v0, 5
+	syscall 
+	move $s0, $v0
+	sw $s0, dimension
+	
+	li $v0, 9
+	mul $a0, $s0, 2
+	syscall 
+	sw $v0, address
+	
+	lw $s0, dimension
+	lw $s1, address #address 
+	mul $s2, $s0, $s0 #counter
+	add $s3, $zero, $zero
+	jal createElements
+	
+	jal menu
+	
+	
+	
+	
+	
+	#Subprograms
+	createElements: 
+		addi $s3, $s3, 1
+		sh $s3, 0($s1)
+		addi $s1, $s1, 2
+		blt $s3, $s2, createElements
+		jr $ra 
+	
+	menu:
+		jal menuOptions 
+		li $v0, 5
+		syscall
+		beq $v0, 1, displayDesired
+		beq $v0, 2, rowMajor
+		beq $v0, 3, colMajor
+		j exit	
+	menuOptions: 
+		li $v0, 4
+		la $a0, menuMessage
+		syscall
+		li $v0, 4
+		la $a0, menu1
+		syscall
+		li $v0, 4
+		la $a0, menu2
+		syscall
+		li $v0, 4
+		la $a0, menu3
+		syscall
+		li $v0, 4
+		la $a0, menu4
+		syscall
+		li $v0, 4
+		la $a0, userChoice
+		syscall
+	
+		jr $ra
+	
+	exit:
+		li $v0, 10
+		syscall
+	
+	displayDesired:
+		li $v0, 4
+		la $a0, rowSpecificationMessage
+		syscall
+		li $v0, 5
+		syscall
+		
+		lw $s0, dimension #dimension
+		ble $v0, $zero, displayDesired
+		bgt $v0, $s0, displayDesired
+		add $s1, $zero, $v0 #row
+		
+		colSpecification:
+		li $v0, 4
+		la $a0, colSpecificationMessage
+		syscall
+		
+		li $v0, 5
+		syscall
+		
+		
+		ble $v0, $zero, colSpecification
+		bgt $v0, $s0, colSpecification
+		add $s2, $zero, $v0 #col
+		
+		add $a0, $zero, $s1
+		add $a1, $zero, $s2
+		
+		
+		
+		jal displayDesiredCalculation
+		move $s0, $v0
+		
+		li $v0, 4 
+		la $a0, resultMessage
+		syscall
+		
+		add $a0, $s0, $zero
+		li $v0, 1
+		syscall
+		
+		li $v0, 4
+		la $a0, newLine	
+		syscall
+		
+		j menu
+		
+		
+	
+	displayDesiredCalculation:	
+		addi $sp, $sp, -24
+		sw $s0, 20($sp)
+		sw $s1, 16($sp)
+		sw $s2, 12($sp)
+		sw $s3, 8($sp)
+		sw $s4, 4($sp)
+		sw $ra, 0($sp) 
+		
+		lw $s0, dimension #dimension
+		move $s1, $a0 #row
+		move $s2, $a1 #col
+		addi $s1, $s1, -1
+		mul $s1, $s1, $s0
+		
+		addi $s2, $s2, -1
+		add $s3, $s2, $s1
+		mul $s3, $s3, 2
+		
+		lw $s4, address
+		add $s3, $s3, $s4
+		
+		lh $v0, 0($s3)
+		
+		lw $ra, 0($sp)
+		lw $s4, 4($sp)
+		lw $s3, 8($sp)
+		lw $s2, 12($sp)
+		lw $s1, 16($sp)
+		lw $s0, 20($sp)
+		addi $sp, $sp, 24
+		
+		jr $ra
+	
+	rowMajor:
+		lw $a0, dimension
+		lw $a1, address
+		jal rowMajorCalculation
+		add $s0, $v0, $zero
+		
+		li $v0, 4 
+		la $a0, resultMessage
+		syscall
+		
+		add $a0, $s0, $zero
+		li $v0, 1
+		syscall
+		
+		li $v0, 4
+		la $a0, newLine	
+		syscall
+		
+		j menu
+	
+	rowMajorCalculation: #a0 dimension, a1 address
+		addi $sp, $sp, -28
+		sw $s0, 24($sp)
+		sw $s1, 20($sp)
+		sw $s2, 16($sp)
+		sw $s3, 12($sp)
+		sw $s4, 8($sp)
+		sw $s5, 4($sp)
+		sw $ra, 0($sp) 
+	
+		add $s0, $zero, $zero #row
+		add $s1, $zero, $zero #col
+		add $s2, $zero, $zero #sum
+		add $s3, $zero, $a1 #address
+		add $s4, $zero, $a0 #dimension 
+		add $s5, $zero, $zero
+		
+		rowFirstLoop:
+			rowInnerLoop:
+				mul $s5, $s1, 2
+				add $s5, $s5, $s3
+				lh $s5, 0($s5)
+				add $s2, $s2, $s5
+				addi $s1, $s1, 1
+				blt $s1, $s4, rowInnerLoop
+			add $s1, $zero, $zero
+			mul $s5, $s4, 2
+			add $s3, $s3, $s5
+			addi $s0, $s0, 1
+			blt $s0, $s4, rowFirstLoop
+		
+		add $v0, $s2, $zero
+		lw $ra, 0($sp)
+		lw $s5, 4($sp)
+		lw $s4, 8($sp)
+		lw $s3, 12($sp)
+		lw $s2, 16($sp)
+		lw $s1, 20($sp)
+		lw $s0, 24($sp)
+		addi $sp, $sp, 28
+		jr $ra
+		
+	colMajor:
+		lw $a0, dimension
+		lw $a1, address
+		jal colMajorCalculation
+		add $s0, $v0, $zero
+		
+		li $v0, 4 
+		la $a0, resultMessage
+		syscall
+		
+		add $a0, $s0, $zero
+		li $v0, 1
+		syscall
+		
+		li $v0, 4
+		la $a0, newLine	
+		syscall
+		
+		j menu
+	
+	colMajorCalculation: #a0 dimension, a1 address
+		addi $sp, $sp, -28
+		sw $s0, 24($sp)
+		sw $s1, 20($sp)
+		sw $s2, 16($sp)
+		sw $s3, 12($sp)
+		sw $s4, 8($sp)
+		sw $s5, 4($sp)
+		sw $ra, 0($sp) 
+		
+		add $s0, $zero, $zero #row
+		add $s1, $zero, $zero #col
+		add $s2, $zero, $zero #sum
+		add $s3, $zero, $a1 #address
+		add $s4, $zero, $a0 #dimension
+		add $s5, $zero, $zero 
+		
+		colFirstLoop:
+			colInnerLoop:
+				mul $s5, $s0, 2
+				mul $s5, $s5, $s4		
+				add $s5, $s5, $s3
+				lh $s5, 0($s5)
+				add $s2, $s2, $s5
+				addi $s0, $s0, 1
+				blt $s0, $s4, colInnerLoop
+				
+			add $s0, $zero, $zero
+			addi $s3, $s3, 2
+			addi $s1, $s1, 1
+			blt $s1, $s4, colFirstLoop
+		
+		add $v0, $s2, $zero
+		lw $ra, 0($sp)
+		lw $s5, 4($sp)
+		lw $s4, 8($sp)
+		lw $s3, 12($sp)
+		lw $s2, 16($sp)
+		lw $s1, 20($sp)
+		lw $s0, 24($sp)
+		addi $sp, $sp, 28
+		jr $ra
+				
+		
+	
+		
+	
+.data
+	welcomeMessage: .asciiz "Welcome to lab 6\n"
+	dimensionMessage: .asciiz "Enter the matrix size in terms of its dimensions: "
+	menuMessage: .asciiz "Please choose one of the options\n"
+	menu1: .asciiz "1)Display desired elements of the matrix by specifying its row and column member\n"
+	menu2: .asciiz "2)Obtain summation of matrix elements row-major (row by row) summation\n"
+	menu3: .asciiz "3)Obtain summation of matrix elements column-major (column by column) summation\n"
+	menu4: .asciiz "E)Exit\n"
+	newLine: .asciiz "\n"
+	resultMessage: .asciiz "Result is "
+	rowSpecificationMessage: .asciiz "Enter the row index: "
+	colSpecificationMessage: .asciiz "Enter the col index: "
+	userChoice: .asciiz "Your Choice: "
+	
+	dimension: .word 0
+	address: .word 0
